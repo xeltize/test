@@ -100,10 +100,10 @@ local seat = chr.Humanoid.SeatPart
 local car = seat.Parent
 local primary = car.PrimaryPart
 workspace.Gravity = 0
-local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position+Vector3.new(0,500,0)).magnitude
-print(dist/75)
+local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position+Vector3.new(0,1000,0)).magnitude
+print(dist/150)
 local TweenService = game:GetService("TweenService")
-local TweenInfoToUse = TweenInfo.new(38, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+local TweenInfoToUse = TweenInfo.new(37, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
 
 local TweenValue = Instance.new("CFrameValue")
 TweenValue.Value = car:GetPrimaryPartCFrame()
@@ -111,7 +111,7 @@ TweenValue.Value = car:GetPrimaryPartCFrame()
 TweenValue.Changed:Connect(function()
 car:PivotTo(TweenValue.Value)
 end)
-local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace.Etc.Waypoint.Waypoint.CFrame+Vector3.new(0,500,0)})
+local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace.Etc.Waypoint.Waypoint.CFrame+Vector3.new(0,1000,0)})
 OnTween:Play()
 OnTween.Completed:Wait()
 local plr = game.Players.LocalPlayer
@@ -121,9 +121,9 @@ local seat = chr.Humanoid.SeatPart
 local car = seat.Parent
 local primary = car.PrimaryPart
 workspace.Gravity = 0
-local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position+Vector3.new(0,7,0)).magnitude
+local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position+Vector3.new(0,30,0)).magnitude
 local TweenService = game:GetService("TweenService")
-local TweenInfoToUse = TweenInfo.new(dist/75, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
+local TweenInfoToUse = TweenInfo.new(dist/150, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
 
 local TweenValue = Instance.new("CFrameValue")
 TweenValue.Value = car:GetPrimaryPartCFrame()
@@ -131,7 +131,7 @@ TweenValue.Value = car:GetPrimaryPartCFrame()
 TweenValue.Changed:Connect(function()
 car:PivotTo(TweenValue.Value)
 end)
-local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace.Etc.Waypoint.Waypoint.CFrame+Vector3.new(0,7,0)})
+local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace.Etc.Waypoint.Waypoint.CFrame+Vector3.new(0,30,0)})
 OnTween:Play()
 OnTween.Completed:Wait()
 local prepos = workspace.Etc.Waypoint.Waypoint.Position
@@ -154,7 +154,7 @@ repeat task.wait()
         TweenValue.Changed:Connect(function()
         car:PivotTo(TweenValue.Value)
         end)
-        local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace.Etc.Waypoint.Waypoint.CFrame*CFrame.new(0,0,10)})
+        local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace.Etc.Waypoint.Waypoint.CFrame*CFrame.new(0,0,20)})
         OnTween:Play()
         OnTween.Completed:Wait()
         if workspace.Etc.Waypoint.Waypoint.Position == prepos then
@@ -165,7 +165,7 @@ local seat = chr.Humanoid.SeatPart
 local car = seat.Parent
 local primary = car.PrimaryPart
 workspace.Gravity = 0
-local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position-Vector3.new(0,13,0)).magnitude
+local dist = (primary.Position-workspace.Etc.Waypoint.Waypoint.Position-Vector3.new(0,25,0)).magnitude
 local TweenService = game:GetService("TweenService")
 local TweenInfoToUse = TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0)
 
@@ -175,7 +175,7 @@ TweenValue.Value = car:GetPrimaryPartCFrame()
 TweenValue.Changed:Connect(function()
 car:PivotTo(TweenValue.Value)
 end)
-local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace.Etc.Waypoint.Waypoint.CFrame-Vector3.new(0,13,0)})
+local OnTween = TweenService:Create(TweenValue, TweenInfoToUse, {Value=workspace.Etc.Waypoint.Waypoint.CFrame-Vector3.new(0,25,0)})
 OnTween:Play()
 OnTween.Completed:Wait()
 end
